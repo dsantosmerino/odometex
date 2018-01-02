@@ -1,0 +1,86 @@
+[
+  {
+    "label": "Great Wall",
+    "meters": 8851000
+  },
+  {
+    "label": "Amazon River",
+    "meters": 6992000
+  },
+  {
+    "label": "Nile",
+    "meters": 6853000
+  },
+  {
+    "label": "Sahara",
+    "meters": 4800000
+  },
+  {
+    "label": "Route 66",
+    "meters": 3945000
+  },
+  {
+    "label": "Ganges",
+    "meters": 2525000
+  },
+  {
+    "label": "Habana to New York",
+    "meters": 2106000
+  },
+  {
+    "label": "Camino de Santiago",
+    "meters": 791000
+  },
+  {
+    "label": "Barcelona to Madrid",
+    "meters": 606000
+  },
+  {
+    "label": "Grand Canyon",
+    "meters": 446000
+  },
+  {
+    "label": "Yonge Street, Toronto",
+    "meters": 86000
+  },
+  {
+    "label": "Central Line, London Underground",
+    "meters": 74000
+  },
+  {
+    "label": "Broadway, New York",
+    "meters": 53000
+  },
+  {
+    "label": "Marathon",
+    "meters": 42195
+  },
+  {
+    "label": "Central Park, New York",
+    "meters": 4000
+  },
+  {
+    "label": "Champs-Élysées, Paris",
+    "meters": 1910
+  },
+  {
+    "label": "Passeig de Gràcia, Barcelona",
+    "meters": 1300
+  },
+  {
+    "label": "Football pitch",
+    "meters": 105
+  },
+  {
+    "label": "Basketball court",
+    "meters": 28
+  },
+  {
+    "label": "Blue Whale (female)",
+    "meters": 25
+  },
+  {
+    "label": "Bowling lane",
+    "meters": 19
+  }
+]
