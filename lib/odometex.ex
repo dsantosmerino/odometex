@@ -6,7 +6,7 @@ defmodule Odometex do
   alias Odometex.Calculator
 
   @doc """
-  Hello world.
+  Returns a list of distances
 
   ## Examples
 
@@ -14,7 +14,7 @@ defmodule Odometex do
       [%{ "label": "Marathon", "meters": 42195, "times": 1}]
 
   """
-  def compare(distance) do
-    Calculator.distances_with_times(distance)
+  def compare(distance, options \\ %{order: :best_match}) do
+    Calculator.distances_with_times(distance, options)
   end
 end
