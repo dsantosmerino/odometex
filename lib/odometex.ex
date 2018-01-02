@@ -5,6 +5,8 @@ defmodule Odometex do
 
   alias Odometex.Calculator
 
+  @compare_default_options %{order: :best_match, limit: 20}
+
   @doc """
   Returns a list of distances
 
@@ -14,7 +16,8 @@ defmodule Odometex do
       [%{ "label": "Marathon", "meters": 42195, "times": 1}]
 
   """
-  def compare(distance, options \\ %{order: :best_match}) do
-    Calculator.distances_with_times(distance, options)
+  def compare(distance, options \\ []) do
+    merged_options = Enum.into(options, @compare_default_options)
+    Calculator.distances_with_times(distance, merged_options)
   end
 end
