@@ -5,14 +5,14 @@ defmodule Odometex do
 
   alias Odometex.Calculator
 
-  @compare_default_options %{order: :best_match, limit: 20}
+  @compare_default_options %{order: :best_match, limit: 5}
 
   @doc """
   Returns a list of results with the number of times of each one
 
   ## Examples
 
-    iex> Odometex.compare(20, limit: 5)
+    iex> Odometex.compare(20)
     [
       %Odometex.Result{label: "Bowling lane", meters: 19, times: 1.052632},
       %Odometex.Result{label: "Blue Whale (female)", meters: 25, times: 0.8},
