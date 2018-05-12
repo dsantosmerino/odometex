@@ -8,13 +8,22 @@ defmodule Odometex do
   @compare_default_options %{order: :best_match, limit: 20}
 
   @doc """
-  Returns a list of distances
+  Returns a list of results with the number of times of each one
 
   ## Examples
 
-      iex> Odometex.compare(42195)
-      [%{ "label": "Marathon", "meters": 42195, "times": 1}]
-
+    iex> Odometex.compare(20, limit: 5)
+    [
+      %Odometex.Result{label: "Bowling lane", meters: 19, times: 1.052632},
+      %Odometex.Result{label: "Blue Whale (female)", meters: 25, times: 0.8},
+      %Odometex.Result{label: "Basketball court", meters: 28, times: 0.714286},
+      %Odometex.Result{label: "Football pitch", meters: 105, times: 0.190476},
+      %Odometex.Result{
+        label: "Passeig de Gràcia, Barcelona",
+        meters: 1300,
+        times: 0.015385
+      }
+    ]
   """
   def compare(distance, options \\ []) do
     merged_options = Enum.into(options, @compare_default_options)
