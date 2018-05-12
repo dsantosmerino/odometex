@@ -1,11 +1,18 @@
 defmodule Odometex.Calculator do
+  @moduledoc """
+  Provides different distances methods with a range of ordering options.
+  """
+
   alias Odometex.Result
 
   @distances "#{__DIR__}/../config/distances.json"
     |> File.read!
     |> Poison.decode!(as: [%Result{}])
-
-  def distances_with_times(distance, %{ order: :desc } = options) do
+  
+  @doc """
+    Returns a list of results taking first the longest references.
+  """
+  def distances_with_times(distance, %{order: :desc} = options) do
     distances_with_times(
       distance,
       fn(x, y) -> x.meters > y.meters end,
@@ -13,7 +20,10 @@ defmodule Odometex.Calculator do
     )
   end
 
-  def distances_with_times(distance, %{ order: :asc } = options) do
+  @doc """
+    Returns a list of results taking first the shortest references.
+  """
+  def distances_with_times(distance, %{order: :asc} = options) do
     distances_with_times(
       distance,
       fn(x, y) -> x.meters < y.meters end,
@@ -21,7 +31,11 @@ defmodule Odometex.Calculator do
     )
   end
 
-  def distances_with_times(distance, %{ order: :best_match } = options) do
+   @doc """
+    Returns a list of results taking first the distance comparison (times) 
+    that tends to 1.
+  """
+  def distances_with_times(distance, %{order: :best_match} = options) do
     distances_with_times(
       distance,
       fn(x, y) -> abs(x.meters - distance) < abs(y.meters - distance) end,
@@ -40,6 +54,6 @@ defmodule Odometex.Calculator do
   end
 
   defp times_value(item, distance) do
-    distance / item.meters |> Float.round(6)
+    Float.round(distance / item.meters, 6)
   end
 end
