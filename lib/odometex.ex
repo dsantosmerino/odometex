@@ -34,7 +34,7 @@ defmodule Odometex do
 
     iex> Odometex.compare(20, order: :desc, limit: 1)
     [
-      %Odometex.Result{label: "Great Wall", meters: 8851000, times: 2.0e-6}
+      %Odometex.Result{label: "Earth-Moon distance", meters: 384400000, times: 0.0}
     ]
   """
   def compare(distance, options \\ []) do

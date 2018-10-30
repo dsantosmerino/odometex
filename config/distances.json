@@ -1,5 +1,9 @@
 [
   {
+    "label": "Earth-Moon distance",
+    "meters": 384400000
+  },
+  {
     "label": "Great Wall",
     "meters": 8851000
   },
